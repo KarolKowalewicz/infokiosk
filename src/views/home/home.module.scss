@@ -1,0 +1,122 @@
+$main-color: #1c2e5f;
+
+.root {
+  max-width: 1024px;
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid $main-color;
+    background-color: $main-color;
+    transform: rotate(45deg);
+    transition: .3s all;
+    &:hover, 
+    &:focus {
+      background-color: #FFF;
+      box-shadow: 10px 10px #fff, 20px 20px #1c2e5f;
+      a {
+        color: $main-color !important;
+      }
+      img {
+        filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+      }
+      transform: rotate(45deg);
+    }
+    a {
+      transform: rotate(-45deg);
+      text-align: center;
+      text-decoration: none;
+      color: #FFF;
+      font-weight: bold;
+      font-size: 21px;
+      text-transform: uppercase;
+      img {
+        filter: brightness(0) invert(1);
+      }
+      &:visited,
+      &:active {
+        color: #FFF;
+      }
+    }
+    &:nth-child(1) {
+      top: 40px;
+      left: 418px;
+    }
+    &:nth-child(2) {
+      top: 136px;
+      left: 148px;
+    }
+    &:nth-child(3) {
+      top: 400px;
+      left: 40px;
+    }
+    &:nth-child(4) {
+      top: 136px;
+      right: 148px;
+    }
+    &:nth-child(5) {
+      bottom: 40px;
+      left: 418px;
+    }
+    &:nth-child(6) {
+      top: 400px;
+      right: 40px;
+      img {
+        height: 70px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+    }
+    &:nth-child(7) {
+      bottom: 100px;
+      left: 100px;
+    }
+    &:nth-child(8) {
+      bottom: 100px;
+      right: 100px;
+    }
+  }
+}
+
+.logoLibrary {
+  img {
+    width: 50%;
+  }
+}
+
+.logo {
+  width: 256px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}

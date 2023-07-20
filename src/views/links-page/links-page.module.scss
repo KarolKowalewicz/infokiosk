@@ -1,0 +1,28 @@
+.root {
+  list-style: none;
+  padding: 50px;
+  transition: all 250ms;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  li {
+    margin-bottom: 10px;
+  }
+  .link {
+    display: block;
+    padding: 50px 40px;
+    border: 10px solid #1c2e5f;
+    color: #1c2e5f;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s all;
+    &:hover {
+      background-color: #1c2e5f;
+      color: #fff;
+
+    }
+  }
+}

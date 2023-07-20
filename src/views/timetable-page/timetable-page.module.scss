@@ -1,0 +1,54 @@
+$main-color: #1c2e5f;
+.root {
+  height: 100vh;
+  transition: all 250ms;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 10px solid $main-color;
+    background-color: $main-color;
+    transform: rotate(45deg);
+    transition: .3s all;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover, 
+    &:focus {
+      background-color: #FFF;
+      a {
+        color: $main-color !important;
+      }
+      img {
+        filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+      }
+      transform: rotate(45deg);
+    }
+    a {
+      transform: rotate(-45deg);
+      text-align: center;
+      text-decoration: none;
+      color: #FFF;
+      font-weight: bold;
+      font-size: 21px;
+      text-transform: uppercase;
+      img {
+        filter: brightness(0) invert(1);
+      }
+      &:visited,
+      &:active {
+        color: #FFF;
+      }
+    }
+  }
+}
